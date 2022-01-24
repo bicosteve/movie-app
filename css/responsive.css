@@ -77,32 +77,4 @@
   }
 }
 
-@media screen and (max-width: 800px) {
-  .tags {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 790px;
-  }
-
-  .movies_tab,
-  .shows_tab {
-    font-size: 1rem;
-  }
-
-  .movies_tab,
-  .shows_tab,
-  .form_tab {
-    margin: 0 0.7rem;
-  }
-
-  .movie {
-    width: 350px;
-    margin: 0.8rem;
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-  }
-}
+/*  */
