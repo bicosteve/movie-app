@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Movie App</title>
+  </head>
+  <body>
+    <header>
+      <div class="header_container">
+        <div class="banner">
+          <a href="index.html">Movies App</a>
+        </div>
+        <div class="tags">
+          <div class="shows_tab"><a href="#">Shows</a></div>
+          <div class="movies_tab"><a href="#">Movies</a></div>
+          <form action="" id="search_form" class="form_tab">
+            <input type="text" id="search" class="search" placeholder="Search..." />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="single_movie">
+      <div class="single_image_container">
+        <img src="img/movie-poster.jpg" alt="text-it" />
+      </div>
+      <div class="single_movie_details">
+        <div class="movie_metadata">
+          <div class="title_year">
+            <span class="movie_title">Movie Title </span>
+            <span class="movie_year">Movie Year</span>
+          </div>
+          <div class="genre_duration">
+            <span class="genre">Genre</span>
+            <div class="separator"></div>
+            <span class="time">Time mins</span>
+          </div>
+        </div>
+        <div class="user_actions">
+          <div class="user_score">
+            <span class="percentage_container">70%</span>
+          </div>
+          <div class="user_like"><i class="fa fa-thumbs-up"></i></div>
+          <div class="trailer"><i class="fa fa-play-circle fa-2x"></i></div>
+        </div>
+        <div class="movie_overview">
+          <h4>Overview</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsa doloremque
+            soluta labore deleniti sint laudantium quibusdam distinctio dolores ex.
+          </p>
+        </div>
+        <div class="director">
+          <h5>Direcotor</h5>
+          <p>Lorem, ipsum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="page_numbers" id="pagination"></div>
+    <script src="API.js"></script>
+    <script src="UI.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

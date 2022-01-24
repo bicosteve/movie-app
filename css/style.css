@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 120%;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+}
+
+header {
+  padding: 1rem;
+  background-color: var(--secondary-color);
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner a {
+  font-size: 140%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  max-width: 550px;
+}
+
+.movies_tab,
+.shows_tab {
+  font-size: 1.3rem;
+}
+
+.movies_tab,
+.shows_tab,
+.form_tab {
+  margin: 0 0.8rem;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: #7378c5;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie_info {
+  display: flex;
+  color: #eee;
+  padding: 0.2rem 0.9rem;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+
+.movie_info h3 {
+  margin-top: 0;
+  font-size: 90%;
+}
+
+.movie_info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie_info span.green {
+  color: lightgreen;
+}
+
+.movie_info span.orange {
+  color: orange;
+}
+
+.movie_info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  font-size: 97%;
+  padding: 2rem;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.action_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action_button button {
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.action_button button:hover {
+  cursor: pointer;
+}
+
+/*Pagination*/
+
+.page_numbers {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.span_content {
+  margin: 0 0.4rem;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+}
+
+.active_span {
+  background-color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+/*SINGLE MOVIE*/
+
+.single_movie {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0.7rem auto;
+}
+
+.single_image_container {
+  margin-right: 1rem;
+  height: 500px;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.single_image_container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.single_movie_details {
+  width: 65%;
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.single_movie_details .time {
+  font-size: 0.6rem;
+}
+
+.movie_metadata,
+.user_actions,
+.movie_overview {
+  margin-bottom: 1rem;
+}
+
+.title_year {
+  margin-bottom: 0.5rem;
+}
+
+.title_year .movie_title {
+  margin-right: 2rem;
+}
+
+.genre_duration {
+  display: flex;
+  align-items: center;
+}
+
+.genre_duration .separator {
+  margin: 0 1rem;
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.user_actions {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+}
+
+.user_actions .user_score {
+  height: 7rem;
+  width: 7rem;
+  border: 1px solid yellowgreen;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background-color: #080914;
+}
+
+.user_actions .user_score .percentage_container {
+  margin: auto;
+}
+
+.user_actions .user_like,
+.trailer {
+  margin: 0 2.5rem;
+  padding: 0.5rem;
+  background-color: #080914;
+  border-radius: 3px;
+}
+
+.user_actions .user_like,
+.trailer:hover {
+  cursor: pointer;
+}
+
+.movie_overview p {
+  font-size: 1rem;
+}
+
+.director p {
+  font-size: 0.7rem;
+}

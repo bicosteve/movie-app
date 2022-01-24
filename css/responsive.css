@@ -1,0 +1,81 @@
+@media screen and (max-width: 480px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+  }
+
+  header {
+    padding: 0.2rem;
+  }
+
+  .banner a {
+    font-size: 110%;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 480px;
+  }
+
+  .movies_tab,
+  .shows_tab {
+    font-size: 0.8rem;
+  }
+
+  .movies_tab,
+  .shows_tab,
+  .form_tab {
+    margin: 0 0.2rem;
+  }
+
+  .search {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.7rem;
+    width: 9rem;
+    color: #fff;
+  }
+
+  .search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+  }
+
+  .movie {
+    width: 98%;
+    margin: 0.5rem auto;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .overview {
+    background-color: #fff;
+    font-size: 130%;
+    padding: 0.4rem;
+    position: absolute;
+    top: 25rem;
+    text-align: center;
+    height: 250px;
+  }
+
+  .action_button {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+}
