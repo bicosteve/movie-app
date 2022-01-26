@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media only screen and (min-width: 0) and (max-width: 428px) {
   * {
     box-sizing: border-box;
   }
@@ -13,15 +13,24 @@
     padding: 0.2rem;
   }
 
+  .header_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .banner {
+    margin-right: 7rem;
+  }
+
   .banner a {
-    font-size: 110%;
+    font-size: 100%;
   }
 
   .tags {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    max-width: 480px;
   }
 
   .movies_tab,
@@ -42,7 +51,7 @@
     font-family: inherit;
     font-size: 0.7rem;
     padding: 0.2rem 0.7rem;
-    width: 9rem;
+    width: 5rem;
     color: #fff;
   }
 
@@ -64,14 +73,60 @@
   .overview {
     background-color: #fff;
     font-size: 100%;
-    padding: 0.4rem;
+    padding: 0.5rem 1rem;
     position: absolute;
     top: 20rem;
-    text-align: center;
+    /* width: 400px; */
   }
 
   .action_button {
-    max-width: 95%;
+    max-width: 70%;
     margin: 1rem auto;
+  }
+}
+
+@media only screen and (min-width: 429px) and (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: 110%;
+  }
+
+  .header_container {
+    display: flex;
+    align-items: center;
+  }
+
+  .banner {
+    margin-right: 10rem;
+  }
+
+  .banner a {
+    font-size: 110%;
+  }
+
+  .movies_tab,
+  .shows_tab {
+    font-size: 1rem;
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .movie {
+    width: 340px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 0.3rem 1rem;
   }
 }

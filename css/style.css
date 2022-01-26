@@ -179,6 +179,10 @@ a {
   border-radius: 3px;
 }
 
+.span_content:hover {
+  cursor: pointer;
+}
+
 .active_span {
   background-color: var(--secondary-color);
   font-size: 1.5rem;
