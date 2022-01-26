@@ -19,10 +19,11 @@ class Home {
     };
 
     const response = await fetch(
-      `${this.SEARCH_URL}/${this.api_key}/${movie}`,
+      `https://api.themoviedb.org/3/search/movie?api_key=${this.api_KEY}&query=${movie}`,
       requestOptions
     );
     const data = await response.json();
+    console.log(data);
     return data;
   }
 

@@ -4,7 +4,6 @@ class UI {
     this.pagination = document.getElementById("pagination");
     this.movieSet = { moviesPerPage: 4, currentPage: 1, results: null };
     this.imagePath = "https://image.tmdb.org/t/p/w500";
-    //this.infoButton = document.querySelector(".movie_info");
   }
 
   init(movies) {
@@ -17,8 +16,11 @@ class UI {
 
     this.pagination.innerHTML = "";
 
-    let startMovie = (this.movieSet.currentPage - 1) * this.movieSet.moviesPerPage;
-    let totalPages = Math.ceil(this.movieSet.results.length / this.movieSet.moviesPerPage);
+    let startMovie =
+      (this.movieSet.currentPage - 1) * this.movieSet.moviesPerPage;
+    let totalPages = Math.ceil(
+      this.movieSet.results.length / this.movieSet.moviesPerPage
+    );
     let lastMovie =
       startMovie + this.movieSet.moviesPerPage > this.movieSet.results.length
         ? this.movieSet.results.length
@@ -65,7 +67,9 @@ class UI {
         <img src="${this.imagePath + poster_path}" alt="${original_title}" />
         <div class="movie_info">
           <h3>${original_title}</h3>
-          <span class="${this.getClassByRate(vote_average)}">${vote_average}</span>
+          <span class="${this.getClassByRate(
+            vote_average
+          )}">${vote_average}</span>
         </div>
         <div class="overview">
           <h3>${original_title}</h3>
@@ -87,59 +91,22 @@ class UI {
     this.pagination.appendChild(paginationDiv);
   };
 
-  showHomeMovies(movies) {
-    this.main.innerHTML = "";
-
-    movies.forEach((movie) => {
-      const { original_title, overview } = movie;
-      this.main.innerHTML += `
-        <div class="movie">
-        <img src="#" alt="#" />
-        <div class="movie_info">
-          <h3>${original_title}</h3>
-          <span class="${this.getClassByRate(5)}">rating</span>
-        </div>
-        <div class="overview">
-          <h3>${original_title}</h3>
-          ${overview}
-          <div class="action_button">
-            <button>
-              <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
-            </button>
-            <button>
-              <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    `;
-    });
-  }
-
-  showSearchMovies(movies) {
+  showSearchedMovies(movies) {
     //clearing the main of items in the ui
     this.main.innerHTML = "";
 
     return movies.forEach((movie) => {
-      const { description, id, image, title } = movie;
+      const { overview, id, poster_path, title } = movie;
       this.main.innerHTML += `
-        <div class="movie">
-        <img src="${image}" alt="${title}" />
+        <div id="${id}" class="movie">
+        <img src="${this.imagePath + poster_path}" alt="${title}" />
         <div class="movie_info">
           <h3>${title}</h3>
           <span class="green">0</span>
         </div>
         <div class="overview">
           <h3>Overview</h3>
-          ${description}
-          <div class="action_button">
-            <button>
-              <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
-            </button>
-            <button>
-              <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
-            </button>
-          </div>
+          ${overview}
         </div>
       </div>
       `;

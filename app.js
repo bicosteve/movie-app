@@ -21,15 +21,14 @@ searchForm.addEventListener("submit", function (event) {
     home
       .searchMovie(searchTerm.value)
       .then((data) => {
-        if (data.errorMessage === "") {
-          ui.showSearchMovies(data.results);
+        if (data.results.length > 0) {
+          ui.showSearchedMovies(data.results);
         } else {
-          console.log(data.errorMessage);
+          console.log("Error occured");
         }
       })
       .catch((error) => console.log(error));
 
-    //remove search value
     searchTerm.value = "";
   } else {
     window.location.reload();
