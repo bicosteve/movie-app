@@ -38,15 +38,9 @@ searchForm.addEventListener("submit", function (event) {
 //SINGLE MOVIE
 main.addEventListener("click", (event) => {
   if (event.target.classList.contains("movie_info")) {
-    //console.log(event.target.parentNode.id);
     const movieID = parseInt(event.target.parentNode.id);
-    //window.location.assign(`single.html/${movieID}`);
+
     home.getOneMovie(movieID);
+    //location.assign("single.html");
   }
 });
-
-//ui.getSingleMovie();
-//home.getOneMovie(ui.getSingleMovie);
-
-//single movie
-//pagination

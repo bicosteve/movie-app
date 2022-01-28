@@ -43,7 +43,6 @@ class UI {
 
       //adding event listener on span to change the page
       span.addEventListener("click", function () {
-        //self.loadPage(i + 1);
         if (i + 1 !== self.movieSet.currentPage) {
           self.loadPage(i + 1);
         }
@@ -76,7 +75,7 @@ class UI {
           ${blurb}
           <div class="action_button">
             <button>
-              <a id="${id}" href="single.html/${id}"><i class="fa fa-info-circle fa-2x movie_info" aria-hidden="true"></i></a>
+              <a id="${id}" onClick="getSingleId(${id})"><i class="fa fa-info-circle fa-2x movie_info" aria-hidden="true"></i></a>
             </button>
             <button>
               <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
@@ -90,6 +89,14 @@ class UI {
 
     this.pagination.appendChild(paginationDiv);
   };
+
+  getSingleId(id, movies) {
+    return movies.forEach((movie) => {
+      if (movie.id === id) {
+        console.log(movie);
+      }
+    });
+  }
 
   showSearchedMovies(movies) {
     //clearing the main of items in the ui

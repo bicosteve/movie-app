@@ -19,11 +19,11 @@ class Home {
     };
 
     const response = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${this.api_KEY}&query=${movie}`,
+      `https://api.themoviedb.org/3/search/movie?api_key=${this.api_KEY}&query=${movie}&page=1`,
       requestOptions
     );
     const data = await response.json();
-    console.log(data);
+    //console.log(data);
     return data;
   }
 
@@ -32,7 +32,7 @@ class Home {
       `https://api.themoviedb.org/3/movie/${movieID}?api_key=${this.api_KEY}&language=en-US`
     );
     const data = await response.json();
-    //console.log(data);
+    console.log(data);
     return data;
   }
 }
